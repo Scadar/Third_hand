@@ -12,7 +12,7 @@ let App = () => {
             <div className='container'>
                 <ThBreadcrumb/>
                 <ShopFilters/>
-                <ShopCard/>
+                <ShopCard/><ShopCard/>
             </div>
         </>
     );
