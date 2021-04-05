@@ -5,6 +5,7 @@ import ThBreadcrumb from "./components/breadcrumb/ThBreadcrumb";
 import ShopFilters from "./components/shopFilter/ShopFilters";
 import ShopCard from "./components/shopCard/ShopCard";
 
+
 let App = () => {
     return (
         <>

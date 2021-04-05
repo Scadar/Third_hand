@@ -4,9 +4,27 @@
   font-family: Montserrat;
   font-size: 18px;
   line-height: 22px;
+  color: #000;
 }
 .shop__filters-text{
 
   font-size: 27px;
   line-height: 33px;
+}
+.dropdown{
+  text-align: center;
+  padding: 5px 15px;
+  border: 1px solid black;
+  margin-right: 15px;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+  margin-bottom: 95px;
+  border-radius: 8px;
+}
+.ant-dropdown-menu-item{
+
+}
+.ant-dropdown-menu{
+  width: 150px;
+  padding: 10px 0;
+  margin: 10px -45px 0;
 }
