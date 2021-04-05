@@ -24,7 +24,35 @@
 
 }
 .ant-dropdown-menu{
-  width: 150px;
+  width: 300px;
   padding: 10px 0;
-  margin: 10px -45px 0;
+  margin: 10px -110px 0;
+}
+.filter-price-text{
+  font-size: 13px;
+  padding-top: 5px;
+  padding-right: 15px;
+
+}
+.filter-price-container{
+  display: flex;
+  margin-bottom: 15px;
+
+}
+.ant-btn{
+  border-radius: 8px;
+  border: 1px solid #B2B2B2;
+}
+.sizeDropdown-menu{
+  width: 110px;
+  margin: 10px -22px 0;
+
+}
+.sizeDropdown-items{
+  padding: 15px;
+
+}
+.sexDropdown-menu{
+  width: 110px;
+  margin: 10px -40px 0;
 }

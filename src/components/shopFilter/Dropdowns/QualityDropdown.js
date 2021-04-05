@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {Menu, Slider} from 'antd';
+import {Button, Menu, Slider} from 'antd';
 function onChange(value) {
     console.log('onChange: ', value);
 }
@@ -10,15 +10,19 @@ function onAfterChange(value) {
 }
 
 
-let PriceDropdown = (
+let QualityDropdown = (
     <Menu>
 
         <Menu.Item key="0">
+            <div className="filter-price-container">
+                <div className='filter-price-text'>Выбрать диапазон качества:</div>
+                <Button className = 'btn-price'>Сбросить</Button>
+            </div>
             <Slider
                 range
-
-                step={100}
-                max={5000}
+                step={1}
+                max={10}
+                autoFocus={true}
                 defaultValue={[0, 80]}
                 onChange={onChange}
                 onAfterChange={onAfterChange}
@@ -32,4 +36,4 @@ let PriceDropdown = (
 
 
 
-export default PriceDropdown;
+export default QualityDropdown;
