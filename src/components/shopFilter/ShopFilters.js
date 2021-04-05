@@ -1,6 +1,7 @@
 import React from 'react';
 import {Link} from "react-router-dom";
 import './ShopFilter.scss'
+import PriceFilter from 'PriceFilter'
 
 let ShopFilters = () => {
     return (
@@ -10,16 +11,7 @@ let ShopFilters = () => {
                 Фильтры :
             </div>
             <div className="shop__filters-price">
-                <div className="dropdown">
-                    <button className="btn btn-filter dropdown-toggle" type="button" id="dropdownMenuButton1"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                        Цена
-                    </button>
-                    <ul className="range dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                        <label htmlFor="customRange2" className="form-label">Выбранный ценовой диапазон</label>
-                        <input type="range" className="form-range" min="0" max="5" id="customRange2"/>
-                    </ul>
-                </div>
+                <PriceFilter />
             </div>
             <div className="shop__filters-quality">
                 <div className="dropdown">
