@@ -18,6 +18,7 @@ let QualityDropdown = (
                 <div className='filter-price-text'>Выбрать диапазон качества:</div>
                 <Button className = 'btn-price'>Сбросить</Button>
             </div>
+            <div className="line"></div>
             <Slider
                 range
                 step={1}

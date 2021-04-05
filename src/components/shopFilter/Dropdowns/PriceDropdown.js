@@ -20,6 +20,7 @@ let PriceDropdown = (
                 <div className='filter-price-text'>Выбрать ценовой диапазон:</div>
                 <Button className = 'btn-price'>Сбросить</Button>
             </div>
+            <div className="line"></div>
             <Slider
                 range
 
