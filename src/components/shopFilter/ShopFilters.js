@@ -1,5 +1,4 @@
 import React from 'react';
-import {Link} from "react-router-dom";
 import './ShopFilter.scss'
 import PriceDropdown from './Dropdowns/PriceDropdown'
 import {Dropdown} from "antd";

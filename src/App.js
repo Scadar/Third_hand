@@ -4,6 +4,7 @@ import Header from "./components/header/Header";
 import ThBreadcrumb from "./components/breadcrumb/ThBreadcrumb";
 import ShopFilters from "./components/shopFilter/ShopFilters";
 import ShopCard from "./components/shopCard/ShopCard";
+import Footer from "./components/footer/Footer";
 
 
 let App = () => {
@@ -14,7 +15,10 @@ let App = () => {
                 <ThBreadcrumb/>
                 <ShopFilters/>
                 <ShopCard/>
+                <ShopCard/>
+
             </div>
+            <Footer />
         </>
     );
 }
