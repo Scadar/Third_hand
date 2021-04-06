@@ -1,0 +1,71 @@
+.shop__filters{
+  display: flex;
+  justify-content: space-between;
+  font-family: Montserrat;
+  font-size: 18px;
+  line-height: 22px;
+  color: #000;
+}
+.shop__filters-text{
+
+  font-size: 27px;
+  line-height: 33px;
+}
+.dropdown{
+  text-align: center;
+  padding: 5px 15px;
+  border: 1px solid black;
+  margin-right: 15px;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+  margin-bottom: 95px;
+  border-radius: 8px;
+}
+.ant-dropdown-menu-item{
+
+}
+.ant-dropdown-menu{
+  width: 300px;
+  padding: 10px 0;
+  margin: 10px -110px 0;
+}
+.filter-price-text{
+  font-size: 13px;
+  padding-top: 5px;
+  padding-right: 15px;
+
+}
+.filter-price-container{
+  display: flex;
+  margin-bottom: 15px;
+
+}
+.ant-btn{
+  border-radius: 8px;
+  border: 1px solid #B2B2B2;
+}
+.sizeDropdown-menu{
+  width: 110px;
+  margin: 10px -22px 0;
+
+}
+.sizeDropdown-items{
+  padding: 15px;
+
+}
+.sexDropdown-menu{
+  width: 110px;
+  margin: 10px -40px 0;
+}
+a{
+  color: #000000;
+}
+.line{
+  text-align: center;
+  width: 275px;
+  height: 0px;
+  border: 1px solid #000000;
+
+}
+.ant-slider{
+  padding-top: 50px;
+}

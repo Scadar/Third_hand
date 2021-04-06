@@ -1,0 +1,82 @@
+.shop {
+  &__cards {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 95px;
+    flex-wrap: wrap;
+  }
+  &__card {
+    text-align: center;
+    border: 1px solid #B3B3B3;
+    box-sizing: border-box;
+    width: 420px;
+    height: 605px;
+    border-radius: 15px;
+    position: relative;
+    transition:1s;
+    margin-bottom: 30px;
+  }
+  &__card:hover{
+    box-shadow: 4px 4px 17px 7px rgba(0, 0, 0, 0.25);
+
+  }
+  &__card-img {
+    height: 420px;
+    width: 320px;
+    padding-top: 35px;
+    margin-bottom: 20px;
+  }
+  &__card-inner{
+    max-width: 320px;
+    margin: 0 auto;
+    text-align: left;
+  }
+  &__card-title {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 31px;
+    line-height: 33px;
+    margin-bottom: 10px;
+  }
+  &__card-text {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 17px;
+    margin-bottom: 30px;
+    color: #6F6F6F;
+  }
+  &__card-price {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 110.7%;
+    padding-top: 15px;
+  }
+  &__btn{
+    position: absolute;
+    right: 45px;
+    bottom: 30px;
+    width: 50px;
+    height: 55px;
+    background-color:  #FFFFFF;
+    border: 1px solid #B2B2B2;
+
+    border-radius: 8px;
+  }
+  &__btn-img{
+    width: 34px;
+    height: 34px;
+  }
+
+}
+
+
+.ant-carousel img{
+  margin: 0 auto;
+  padding-top: 20px;
+  margin-bottom: 20px;
+}

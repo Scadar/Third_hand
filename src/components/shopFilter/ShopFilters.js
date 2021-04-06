@@ -1,75 +1,63 @@
 import React from 'react';
-import {Link} from "react-router-dom";
 import './ShopFilter.scss'
+import PriceDropdown from './Dropdowns/PriceDropdown'
+import {Dropdown, Popover} from "antd";
+import {DownOutlined} from "@ant-design/icons";
+import QualityDropdown from './Dropdowns/QualityDropdown'
+import CategoryDropdown from './Dropdowns/CategoryDropdown'
+import SizeDropdown from './Dropdowns/SizeDropdown'
+import SexDropdown from './Dropdowns/SexDropdown'
 
 let ShopFilters = () => {
     return (
-
         <div className="shop__filters">
             <div className="shop__filters-text">
                 Фильтры :
             </div>
             <div className="shop__filters-price">
                 <div className="dropdown">
-                    <button className="btn btn-filter dropdown-toggle" type="button" id="dropdownMenuButton1"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                        Цена
-                    </button>
-                    <ul className="range dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                        <label htmlFor="customRange2" className="form-label">Выбранный ценовой диапазон</label>
-                        <input type="range" className="form-range" min="0" max="5" id="customRange2"/>
-                    </ul>
+                    <Popover placement="bottom" title={null} content={PriceDropdown} trigger="click" style={{height: 100}}>
+                        <span className="ant-dropdown-link">
+                            Цена <DownOutlined/>
+                        </span>
+                    </Popover>
                 </div>
             </div>
+
             <div className="shop__filters-quality">
                 <div className="dropdown">
-                    <button className="btn btn-filter dropdown-toggle" type="button" id="dropdownMenuButton1"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                        Качество
-                    </button>
-                    <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                        <label htmlFor="customRange2" className="form-label">Выбранный ценовой диапазон</label>
-                        <input type="range" className="form-range" min="0" max="5" id="customRange2"/>
-                    </ul>
+                    <Dropdown overlay={QualityDropdown} trigger={['click']}>
+                <span className="ant-dropdown-link" onClick={e => e.preventDefault()}>
+                    Качество <DownOutlined/>
+                </span>
+                    </Dropdown>
                 </div>
             </div>
             <div className="shop__filters-category">
                 <div className="dropdown">
-                    <button className="btn-filter btn  dropdown-toggle" type="button" id="dropdownMenuButton1"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                        Категория
-                    </button>
-                    <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                        <li><Link className="dropdown-item" to="#">Action</Link></li>
-                        <li><Link className="dropdown-item" to="#">Another action</Link></li>
-                        <li><Link className="dropdown-item" to="#">Something else here</Link></li>
-                    </ul>
+                    <Dropdown overlay={CategoryDropdown} trigger={['click']}>
+                <span className="ant-dropdown-link" onClick={e => e.preventDefault()}>
+                    Категория <DownOutlined/>
+                </span>
+                    </Dropdown>
                 </div>
             </div>
             <div className="shop__filters-size">
                 <div className="dropdown">
-                    <button className="btn btn-filter dropdown-toggle" type="button" id="dropdownMenuButton1"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                        Размер
-                    </button>
-                    <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                        <li><Link className="dropdown-item" href="#">Action</Link></li>
-                        <li><Link className="dropdown-item" href="#">Another action</Link></li>
-                        <li><Link className="dropdown-item" href="#">Something else here</Link></li>
-                    </ul>
+                    <Dropdown overlay={SizeDropdown} trigger={['click']}>
+                <span className="ant-dropdown-link" onClick={e => e.preventDefault()}>
+                    Размер <DownOutlined/>
+                </span>
+                    </Dropdown>
                 </div>
             </div>
             <div className="shop__filters-sex">
                 <div className="dropdown">
-                    <button className="btn btn-filter dropdown-toggle" type="button" id="dropdownMenuButton1"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                        Пол
-                    </button>
-                    <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                        <li><Link className="dropdown-item" href="#">Action</Link></li>
-                        <li><Link className="dropdown-item" href="#">Another action</Link></li>
-                        <li><Link className="dropdown-item" href="#">Something else here</Link></li>
-                    </ul>
+                    <Dropdown overlay={SexDropdown} trigger={['click']}>
+                <span className="ant-dropdown-link" onClick={e => e.preventDefault()}>
+                    Пол <DownOutlined/>
+                </span>
+                    </Dropdown>
                 </div>
             </div>
         </div>
