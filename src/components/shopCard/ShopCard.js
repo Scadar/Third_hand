@@ -1,113 +1,37 @@
-import React from 'react';
-import {Link} from "react-router-dom";
+import React, {useEffect, useState} from 'react';
 import cardImg from '../../img/card-photo.png'
-import cardCart from '../../img/card-cart.svg'
 import './ShopCard.scss'
 
-import {Carousel} from 'antd';
+import Card from "./card/Card";
 
 
 let ShopCard = () => {
+
+    const [cards, setCards] = useState([])
+
+    useEffect(() => {
+        fetch('https://swapi.dev/api/people/')
+            .then(r => r.json())
+            .then(r => {
+                setCards(r.results)
+            })
+    }, [])
+
+
+
+    if(cards.length === 0){
+        return <div>Loading...</div>
+    }
     return (
-
         <div className="shop__cards">
-            <div className="shop__card">
-                <div className="shop__card-scroll">
-
-                    <Carousel autoplay>
-                        <div>
-                            <img src={cardImg} alt=""/>
-                        </div>
-                        <div>
-                            <img src={cardImg} alt=""/>
-                        </div>
-                        <div>
-                            <img src={cardImg} alt=""/>
-                        </div>
-                        <div>
-                            <img src={cardImg} alt=""/>
-                        </div>
-                    </Carousel>
-
-                    <div className="shop__card-inner">
-                        <Link className="card-link">
-                            <div className="shop__card-title">Блузка Костяна</div>
-                            <div className="shop__card-text">Красивая блузка с пятном спермы</div>
-                            <div className="shop__card-price">699.99 ₽</div>
-                        </Link>
-                        <button className="shop__btn">
-                            <img src={cardCart} className="shop__btn-img" alt={''}/>
-                        </button>
-                    </div>
-
-                </div>
-            </div>
-            <div className="shop__card">
-                <div className="shop__card-scroll">
-
-                    <Carousel autoplay>
-                        <div>
-                            <img src={cardImg} alt=""/>
-                        </div>
-                        <div>
-                            <img src={cardImg} alt=""/>
-                        </div>
-                        <div>
-                            <img src={cardImg} alt=""/>
-                        </div>
-                        <div>
-                            <img src={cardImg} alt=""/>
-                        </div>
-                    </Carousel>
-
-                    <div className="shop__card-inner">
-                        <Link className="card-link">
-                            <div className="shop__card-title">Блузка Костяна</div>
-                            <div className="shop__card-text">Красивая блузка с пятном спермы</div>
-                            <div className="shop__card-price">699.99 ₽</div>
-                        </Link>
-                        <button className="shop__btn">
-                            <img src={cardCart} className="shop__btn-img" alt={''}/>
-                        </button>
-                    </div>
-
-                </div>
-            </div>
-            <div className="shop__card">
-                <div className="shop__card-scroll">
-
-                    <Carousel autoplay>
-                        <div>
-                            <img src={cardImg} alt=""/>
-                        </div>
-                        <div>
-                            <img src={cardImg} alt=""/>
-                        </div>
-                        <div>
-                            <img src={cardImg} alt=""/>
-                        </div>
-                        <div>
-                            <img src={cardImg} alt=""/>
-                        </div>
-                    </Carousel>
-
-                    <div className="shop__card-inner">
-                        <Link className="card-link">
-                            <div className="shop__card-title">Блузка Костяна</div>
-                            <div className="shop__card-text">Красивая блузка с пятном спермы</div>
-                            <div className="shop__card-price">699.99 ₽</div>
-                        </Link>
-                        <button className="shop__btn">
-                            <img src={cardCart} className="shop__btn-img" alt={''}/>
-                        </button>
-                    </div>
-
-                </div>
-            </div>
-
+            {
+                cards.map((card, index) => {
+                    return (
+                        <Card key={index} title={card.name} cardImg={cardImg} price={card.mass} text={card.hair_color} />
+                    )
+                })
+            }
         </div>
-
-
     );
 }
 export default ShopCard;

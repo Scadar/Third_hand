@@ -15,8 +15,6 @@ let App = () => {
                 <ThBreadcrumb/>
                 <ShopFilters/>
                 <ShopCard/>
-                <ShopCard/>
-
             </div>
             <Footer />
         </>

@@ -3,6 +3,7 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 95px;
+    flex-wrap: wrap;
   }
   &__card {
     text-align: center;
@@ -13,6 +14,7 @@
     border-radius: 15px;
     position: relative;
     transition:1s;
+    margin-bottom: 30px;
   }
   &__card:hover{
     box-shadow: 4px 4px 17px 7px rgba(0, 0, 0, 0.25);

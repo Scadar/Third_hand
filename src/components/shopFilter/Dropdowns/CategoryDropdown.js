@@ -12,10 +12,7 @@ function onChange(checkedValues) {
 
 let CategoryDropdown = (
     <Menu>
-
         <Menu.Item key="0">
-
-
                 <Col span={1}>
                     <Checkbox onChange={onChange}>Головные уборы</Checkbox>
                 </Col>
@@ -34,18 +31,7 @@ let CategoryDropdown = (
                 <Col span={6}>
                     <Checkbox onChange={onChange}>Обувь</Checkbox>
                 </Col>
-
-
-
-
-
-
-
-
         </Menu.Item>
-
-
-
     </Menu>
 );
 
