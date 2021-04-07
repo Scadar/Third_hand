@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import cardImg from '../../img/card-photo.png'
 import './ShopCard.scss'
-
+import loadImg from '../../img/loadImg.jpg'
 import Card from "./card/Card";
 
 
@@ -20,7 +20,7 @@ let ShopCard = () => {
 
 
     if(cards.length === 0){
-        return <div>Loading...</div>
+        return <div className={loadImg}><img src="loadImg" alt=""/></div>
     }
     return (
         <div className="shop__cards">
