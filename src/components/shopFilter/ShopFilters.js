@@ -1,6 +1,6 @@
 import React from 'react';
 import './ShopFilter.scss'
-import DropdownFilter from './Dropdowns/Dropdown'
+import DropdownFilter from './Dropdowns/DropdownFilter'
 import {Dropdown} from "antd";
 import {DownOutlined} from "@ant-design/icons";
 
