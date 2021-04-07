@@ -3,6 +3,7 @@ import {Button, Divider, Popover} from 'antd';
 import {DownOutlined} from "@ant-design/icons";
 import './Dropdown.scss';
 import {DropdownSlider} from "./DropdownSlider/DropdownSlider";
+import {DropdownCheckBox} from "./DropdownCheakBox/DropdownCheckBox"
 
 const DropdownFilter = ({title, text, maxValue, step, type}) => {
 
@@ -11,7 +12,7 @@ const DropdownFilter = ({title, text, maxValue, step, type}) => {
             case 'slider':
                 return <DropdownSlider step={step} maxValue={maxValue} />
             case 'checkbox':
-                return null
+                return <DropdownCheckBox maxValue={maxValue} />
             default:
                 return null
         }
