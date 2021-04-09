@@ -5,6 +5,7 @@ import ThBreadcrumb from "./components/breadcrumb/ThBreadcrumb";
 import ShopFilters from "./components/shopFilter/ShopFilters";
 import ShopCard from "./components/shopCard/ShopCard";
 import Footer from "./components/footer/Footer";
+import CardPage from "./components/cardPage/CardPage";
 
 
 let App = () => {
@@ -15,6 +16,13 @@ let App = () => {
                 <ThBreadcrumb/>
                 <ShopFilters/>
                 <ShopCard/>
+            </div>
+            <Footer />
+            <Header/>
+            <div className='container'>
+                <ThBreadcrumb/>
+                <ShopFilters/>
+                <CardPage/>
             </div>
             <Footer />
         </>

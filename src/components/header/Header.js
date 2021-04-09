@@ -4,11 +4,8 @@ import './Header.scss'
 import HeaderSearchicon from '../../img/search.svg'
 import HeaderCartIcon from '../../img/cart.svg'
 import HeaderProfileIcon from '../../img/user.svg'
-
 import ProfileBtn from '../profileBtn/ProfileBtn'
 import {Dropdown} from 'antd';
-
-
 
 const Header = () => {
     return (
