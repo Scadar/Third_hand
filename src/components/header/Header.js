@@ -4,10 +4,10 @@ import './Header.scss'
 import HeaderSearchicon from '../../img/search.svg'
 import HeaderCartIcon from '../../img/cart.svg'
 import HeaderProfileIcon from '../../img/user.svg'
-import SignInBtn from '../signInBtn/SignInBtn'
+
 import ProfileBtn from '../profileBtn/ProfileBtn'
 import {Dropdown} from 'antd';
-import {DownOutlined} from '@ant-design/icons';
+
 
 
 const Header = () => {
