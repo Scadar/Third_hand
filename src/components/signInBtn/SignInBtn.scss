@@ -1,0 +1,25 @@
+.ant-dropdown-menu{
+  width: 80px;
+  text-align: center;
+  border: 1px solid #000000;
+  border-radius: 8px;
+
+
+}
+.SignInBtn{
+  display: flex;
+  flex-direction: column;
+  margin-left: -70px;
+  margin-top: 10px;
+}
+.DownOutlined__profile{
+  display: block;
+  padding-right: 70px;
+  margin: 3px;
+  transform: rotate(180deg);
+}
+.SignInBtn-link{
+  display: block;
+  text-align: center;
+
+}

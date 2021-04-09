@@ -4,9 +4,13 @@ import './Header.scss'
 import HeaderSearchicon from '../../img/search.svg'
 import HeaderCartIcon from '../../img/cart.svg'
 import HeaderProfileIcon from '../../img/user.svg'
+import SignInBtn from '../signInBtn/SignInBtn'
+import ProfileBtn from '../profileBtn/ProfileBtn'
+import {Dropdown} from 'antd';
+import {DownOutlined} from '@ant-design/icons';
 
 
-let Header = () => {
+const Header = () => {
     return (
         <header className="Header">
             <div className="container">
@@ -22,7 +26,11 @@ let Header = () => {
                             <img src={HeaderCartIcon} alt="cart" className="Header__cart-icon"/>
                         </Link>
                         <Link to="#" className="Header__profile">
-                            <img src={HeaderProfileIcon} alt="profile" className="Header__profile-icon"/>
+                            <Dropdown  overlay={ProfileBtn} trigger={['click']}>
+                                <a className="ant-dropdown-link" onClick={e => e.preventDefault()}>
+                                    <img src={HeaderProfileIcon} alt="profile" className="Header__profile-icon"/>
+                                </a>
+                            </Dropdown>
                         </Link>
                     </div>
                 </div>
